@@ -1,0 +1,24 @@
+{
+  "name": "security2-xss",
+  "version": "1.0.0",
+  "description": "Extremely simple example of an XSS attack. This case is used to see security protocols and analysis working in practice.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avansinformatica/security2-xss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avansinformatica/security2-xss/issues"
+  },
+  "homepage": "https://github.com/avansinformatica/security2-xss#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jquery": "^3.3.1"
+  }
+}

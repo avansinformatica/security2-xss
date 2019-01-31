@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>simple XSS attack</title>
+        <!-- Many websites use jquery, which we use here to fetch the malicious js.
+        Even if you don't have jquery you can still fetch js files, albeit a bit 
+        more verbose -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="name"></div>
+        <label for="uname">User name</label>
+        <input id="uname" type="text">
+        <label for="pwd">Password</label>
+        <input id="pwd" type="password">
+
+        <!-- This script is the culprit, it directly puts url input into the DOM -->
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            document.getElementById('name').innerHTML = `<p>${name}</p>`;
+        </script>
+    </body>
+</html>
