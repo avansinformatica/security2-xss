@@ -9,6 +9,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 // on this endpoint we receive your secret password
 app.post('/', function(req, res) {
     console.log(req.body.key);
+    res.status(200);
+    res.end();
 });
 
 // provide malicious.js (note that the hacker themselves is not very security minded!)

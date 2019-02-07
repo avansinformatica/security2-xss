@@ -13,11 +13,11 @@
         <label for="pwd">Password</label>
         <input id="pwd" type="password">
 
-        <!-- This script is the culprit, it directly puts url input into the DOM -->
+        <!-- Say hello to the user -->
         <script>
             const urlParams = new URLSearchParams(window.location.search);
             const name = urlParams.get('name');
-            document.getElementById('name').innerHTML = `<p>${name}</p>`;
+            document.getElementById('name').innerHTML = `<p>Hello ${name}</p>`;
         </script>
     </body>
 </html>
